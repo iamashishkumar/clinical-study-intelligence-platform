@@ -46,12 +46,13 @@ better delivery predictability · reduced reporting overhead
 
 Local-first. No study data leaves the environment.
 
-Streamlit UI  ──►  FastAPI (APIs + Background Jobs)  ──►  DuckDB Master
-(Dashboards)                                          ──►  DuckDB Shards
-│                                (per client)
-▼
-Local LLM
-(Ollama)
+```
+Streamlit UI ──► FastAPI (APIs + Background Jobs) ──► DuckDB Master
+(Dashboards)                                      ──► DuckDB Shards
+                      │                               (per client)
+                      ▼
+                 Local LLM (Ollama)
+```
 
 
 Design principles that drove these choices:
